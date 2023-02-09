@@ -3,19 +3,20 @@ import "./App.css"
 import MyNav from "./components/MyNav"
 import MyFooter from "./components/MyFooter"
 import Welcome from "./components/Welcome"
-import AllTheBooks from "./components/AllTheBooks"
+import BookList from "./components/BookList"
+import scifi from "./data/fantasy.json"
+import CommentArea from "./components/CommentArea"
+import AddComment from "./components/AddComment"
 
 function App() {
   return (
     <>
       <MyNav />
       <Welcome />
-      <div id="ciao">
-        <AllTheBooks />
-      </div>
-      <footer>
-        <MyFooter bloccato="fixed" larghezza="100%" />
-      </footer>
+      <AddComment />
+      <BookList books={scifi} />
+      <CommentArea />
+      <MyFooter bloccato="" larghezza="100%" />
     </>
   )
 }
